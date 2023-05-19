@@ -16,20 +16,33 @@ const findAverage = (numberArray) => {
 
 const capitalizedFirstLetter = (string) => {
 
-
-    const capitalizeString = string.split(' ').map((e, i) => {
-
-        console.log("before ", e)
-
-        e[i] = "Z"
-
-        console.log("after ", e)
-        return e[0].toUpperCase()
-    })
-
-
+    const capitalizeString = string
+        .split(' ')
+        .map((e, i) => e[0].toUpperCase() + e.substring(1)
+        ).join(" ");
 
     return capitalizeString
+}
+
+
+// Problem: Palindrome Checker
+// Description: Write a function that checks if a given string is a palindrome (reads the same forward and backward).
+// Sample Input: "racecar"
+// Sample Output: true
+
+const palindromeChecker = (string) => {
+
+    let s = [];
+
+    for (let i = 0; i < string.length; i++) {
+        s.push(string.charAt(i));
+    }
+
+    const reverseString = s.reverse().join("")
+
+
+    return reverseString === string
+
 }
 
 
@@ -44,5 +57,4 @@ const capitalizedFirstLetter = (string) => {
 
 
 
-
-module.exports = { findAverage, capitalizedFirstLetter };
+module.exports = { findAverage, capitalizedFirstLetter, palindromeChecker };

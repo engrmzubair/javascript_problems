@@ -1,4 +1,4 @@
-const { findAverage, capitalizedFirstLetter } = require("./util1")
+const { findAverage, capitalizedFirstLetter, palindromeChecker } = require("./util1")
 
 // intermediate-level JavaScript problems
 
@@ -21,6 +21,8 @@ console.log("capitalize => ", capitalizedFirstLetter("hello word"))
 // Description: Write a function that checks if a given string is a palindrome (reads the same forward and backward).
 // Sample Input: "racecar"
 // Sample Output: true
+
+console.log("palindrome => ", palindromeChecker("racecar"))
 
 // Problem: Unique Elements
 // Description: Write a function that takes an array and returns a new array with only the unique elements.
