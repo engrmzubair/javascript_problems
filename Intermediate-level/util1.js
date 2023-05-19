@@ -32,14 +32,7 @@ const capitalizedFirstLetter = (string) => {
 
 const palindromeChecker = (string) => {
 
-    let s = [];
-
-    for (let i = 0; i < string.length; i++) {
-        s.push(string.charAt(i));
-    }
-
-    const reverseString = s.reverse().join("")
-
+    const reverseString = string.split("").reverse().join('')
 
     return reverseString === string
 
