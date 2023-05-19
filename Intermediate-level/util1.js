@@ -3,7 +3,7 @@
 // Sample Input: [1, 2, 3, 4, 5]
 // Sample Output: 3
 
-const findAverage = (numberArray) => {
+module.exports.findAverage = (numberArray) => {
     const sum = numberArray.reduce((a, c) => a + c)
     const average = sum / numberArray.length
     return average
@@ -14,7 +14,7 @@ const findAverage = (numberArray) => {
 // Sample Input: "hello world"
 // Sample Output: "Hello World"
 
-const capitalizedFirstLetter = (string) => {
+module.exports.capitalizedFirstLetter = (string) => {
 
     const capitalizeString = string
         .split(' ')
@@ -24,17 +24,41 @@ const capitalizedFirstLetter = (string) => {
     return capitalizeString
 }
 
-
 // Problem: Palindrome Checker
 // Description: Write a function that checks if a given string is a palindrome (reads the same forward and backward).
 // Sample Input: "racecar"
 // Sample Output: true
 
-const palindromeChecker = (string) => {
+module.exports.isPalindrome = (string) => {
 
     const reverseString = string.split("").reverse().join('')
 
     return reverseString === string
+
+}
+
+// Problem: Unique Elements
+// Description: Write a function that takes an array and returns a new array with only the unique elements.
+// Sample Input: [1, 2, 3, 2, 4, 1, 5]
+// Sample Output: [1, 2, 3, 4, 5]
+
+module.exports.findUniqueElements = (array) => {
+
+    // const unique = new Set(array);
+    // return [...unique]
+
+    let unique = [];
+
+    array.forEach((e) => {
+
+        const isInclude = unique.includes(e);
+        if (!isInclude)
+            unique.push(e)
+
+    })
+
+    return unique
+
 
 }
 
@@ -47,7 +71,3 @@ const palindromeChecker = (string) => {
 
 
 
-
-
-
-module.exports = { findAverage, capitalizedFirstLetter, palindromeChecker };

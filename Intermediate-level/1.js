@@ -1,4 +1,10 @@
-const { findAverage, capitalizedFirstLetter, palindromeChecker } = require("./util1")
+const {
+    findAverage,
+    capitalizedFirstLetter,
+    isPalindrome,
+    findUniqueElements,
+
+} = require("./util1")
 
 // intermediate-level JavaScript problems
 
@@ -22,12 +28,14 @@ console.log("capitalize => ", capitalizedFirstLetter("hello word"))
 // Sample Input: "racecar"
 // Sample Output: true
 
-console.log("palindrome => ", palindromeChecker("racecar"))
+console.log("palindrome => ", isPalindrome("racecar"))
 
 // Problem: Unique Elements
 // Description: Write a function that takes an array and returns a new array with only the unique elements.
 // Sample Input: [1, 2, 3, 2, 4, 1, 5]
 // Sample Output: [1, 2, 3, 4, 5]
+
+console.log("unique => ", findUniqueElements([1, 2, 3, 2, 4, 1, 5]))
 
 // Problem: Fibonacci Sequence
 // Description: Write a function that generates the Fibonacci sequence up to a given number of terms.
