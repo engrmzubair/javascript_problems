@@ -47,6 +47,9 @@ console.log("unique => ", findUniqueElements([1, 2, 3, 2, 4, 1, 5]))
 // Sample Input: "the quick brown fox"
 // Sample Output: "The Quick Brown Fox"
 
+console.log("Title Case => ", capitalizedFirstLetter("the quick brown fox"))
+
+
 // Problem: Object Keys and Values
 // Description: Write a function that takes an object and returns an array of its keys and values as subarrays.
 // Sample Input: {name: "John", age: 25, city: "New York"}
